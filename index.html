@@ -3,109 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Low Bit Depth</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: #020617;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    button {
-      background: #22c55e;
-      color: #020617;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background: #16a34a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      border-top: 1px solid #1e293b;
-      background: #020617;
-    }
-  </style>
+  <title>lowbitdepth — Calculators & Tools</title>
+  <link rel="stylesheet" crossorigin href="/assets/shared-BZWWbgyz.css">
 </head>
 <body>
 
-  <header>
-    <h1>Low Bit Depth</h1>
-    <p>Minimal static site — GitHub Pages test</p>
-  </header>
+  <nav class="nav">
+    <a href="/" class="nav__brand">lowbitdepth</a>
+  </nav>
 
-  <main>
-    <div class="card">
-      <h2>Hello 👋</h2>
-      <p>If you can see this, your GitHub Pages deployment is working.</p>
+  <div class="container">
+    <div class="page-header" style="flex-direction: column; align-items: flex-start; gap: var(--spacing-sm);">
+      <h1 class="page-title" style="font-size: var(--font-size-3xl); margin-bottom: 0;">Calculators & Tools</h1>
+      <p class="page-subtitle">Interactive tools for financial decisions and beyond.</p>
     </div>
 
-    <div class="card">
-      <h2>Interactive Test</h2>
-      <p>Click the button:</p>
-      <button onclick="handleClick()">Click me</button>
-      <p id="output"></p>
+    <div class="tool-grid">
+
+      <a href="/src/calculators/mortgage/index.html" class="tool-card">
+        <span class="tool-card__icon">🏠</span>
+        <div class="tool-card__title">Mortgage Calculator</div>
+        <p class="tool-card__description">
+          Should I buy a house right now? How much will it cost per month? Should I sell my current home or rent it out?
+          Includes affordability, buy-vs-rent break-even, and sell-vs-rent analysis.
+        </p>
+      </a>
+
+      <a href="/src/calculators/floorplan/index.html" class="tool-card">
+        <span class="tool-card__icon">🏗️</span>
+        <div class="tool-card__title">Floor Plan Overlay</div>
+        <p class="tool-card__description">
+          Load a Zillow floor plan image and drag scale-accurate overlays of your current rooms onto it —
+          instantly see how your rooms fit in a prospective house.
+        </p>
+      </a>
+
     </div>
-
-    <div class="card">
-      <h2>Next Steps</h2>
-      <ul>
-        <li>Hook up your TypeScript build</li>
-        <li>Replace this with your actual app</li>
-        <li>Style it however you want</li>
-      </ul>
-    </div>
-  </main>
-
-  <footer>
-    © 2026 Low Bit Depth
-  </footer>
-
-  <script>
-    function handleClick() {
-      const el = document.getElementById("output");
-      el.textContent = "Button clicked at " + new Date().toLocaleTimeString();
-    }
-  </script>
+  </div>
 
 </body>
 </html>
